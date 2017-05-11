@@ -1,5 +1,6 @@
 // Hangman Game JS
 
+var score, guessCounter, alphaTracker
 
 function game() {
 	
@@ -11,6 +12,8 @@ alert("Outside function test");
 // Basic Play
 // EventListen for keystroke?
 
+
+// var dicitionary[]; score; guessCounter; alphaTracker;
 
 //	Dictionary...Array?
 
@@ -28,5 +31,7 @@ alert("Outside function test");
 
 
 // 	Game Over
+//	Win= score++
+//	Lose= display Game Over
 // 	New Game; User choice or autoplay?
 
