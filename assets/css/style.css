@@ -25,9 +25,16 @@ body {
 
 .game-board {
 	border: dotted 5px;
-	height: 400px;
 }
 
 #trail {
 	text-align: center;
+}
+
+/* Media Querries */
+@media screen and (min-width: 992px){
+	.game-board {
+		height: 400px;
+	}
+	
 }
