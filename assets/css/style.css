@@ -1,0 +1,28 @@
+body {
+	background-color: #000;
+}
+
+@font-face {
+	font-family: robot;
+	src: url(digital_tech.otf);
+}
+#head-container {
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#main-container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.robot-style{
+	background-color: #000;
+	font-family: robot;
+	color: #66fa2d;
+}
+
+.bordered {
+	border: dotted 5px;
+}
