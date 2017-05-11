@@ -6,8 +6,13 @@ function game() {
 	alert("this is a test");
 
 }
+
+alert("Outside function test");
 // Basic Play
 // EventListen for keystroke?
+
+
+//	Dictionary...Array?
 
 
 // 	Wrong Guess
