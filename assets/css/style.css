@@ -23,6 +23,11 @@ body {
 	color: #66fa2d;
 }
 
-.bordered {
+.game-board {
 	border: dotted 5px;
+	height: 400px;
+}
+
+#trail {
+	text-align: center;
 }
