@@ -1,3 +1,5 @@
 Hangman-Game:
 
-Basic hangman game created using javascript.
+An Oregon Trail themed hangman game created using html, css, twitter bootstrap, and javascript.
+
+Font courtesy of Qbotype Fonts from www.fontspace.com/qbotype-fonts/digital-tech.
