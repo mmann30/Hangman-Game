@@ -7,12 +7,17 @@ function game() {
 	var	displayScore = document.getElementById("display-score");
 	var displayCounter = document.getElementById("display-counter");
 	var displayMessage = document.getElementById("message");
+	var displayCurrentWord = document.getElementById("current-word");
+	var displayGuess = document.getElementById("display-guess");
+
 
 	// Gameboard reset
     displayScore.innerHTML = score;
     displayCounter.innerHTML = guessCounter;
     displayMessage.innerText = "Let the Journey Begin!";
-  	
+  	displayCurrentWord.innerText = "0 0 0 0 0";
+  	displayGuess.innerText = "0 0 0 0 0 0";
+
 	// Message object/hashtable
 	var message = {
 		win: "Success! Welcome to Tucson...Tucson?? Damnit!",
@@ -36,6 +41,8 @@ function game() {
 
 	//	Choose a word
 	var currentWord = dictionary[Math.floor(Math.random() * dictionary.length)];
+
+	// set 
 
 // Basic Play
 // EventListen for keystroke?
