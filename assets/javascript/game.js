@@ -1,31 +1,35 @@
 // Hangman Game JS
-
-
 function game() {
 	
 	alert("this is a test");
 	var score = 0;
-	var guessCounter = 6; 
+	var guessCounter = 5; 
 
-	var displayGuess = " ";
+	var	displayScore = document.getElementById("display-score");
+	var displayCounter = document.getElementById("display-counter");
+	var displayMessage = document.getElementById("message");
 
+	// Gameboard reset
+    displayScore.innerHTML = score;
+    displayCounter.innerHTML = guessCounter;
+    displayMessage.innerText = "The Journey Begins!";
+  	
+	
+	// Dictionary array of puzzle words.
+	var dictionary = [
+		"rattlesnake", 
+		"cowboy", 
+		"spur", 
+		"chuckwagon", 
+		"shootout",
+		"buffalo",
+		"pioneer"];
 
-}
-
-alert("Outside function test");
+	//	Choose a word
+	var currentWord = dictionary[Math.floor(Math.random() * dictionary.length)];
 // Basic Play
 // EventListen for keystroke?
 
-
-// Dictionary array of guess words.
-var dictionary = [
-	"rattlesnake", 
-	"cowboy", 
-	"spur", 
-	"chuckwagon", 
-	"shootout",
-	"buffalo",
-	"pioneer"];
 
 // 	Wrong Guess
 //	Lower guess counter
@@ -35,6 +39,9 @@ var dictionary = [
 // 	Correct Guess
 // 	Update word with guessed letter
 //	Remove letter from guessing pool
+}
+
+alert("Outside function test");
 
 
 
