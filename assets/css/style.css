@@ -37,6 +37,11 @@ button {
 	text-align: center;
 }
 
+#trail-log {
+	border: double 1px #66fa2d;
+}
+
+
 /* Media Querries */
 @media screen and (min-width: 992px){
 	.game-board {

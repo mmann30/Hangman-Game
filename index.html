@@ -26,27 +26,29 @@
 	<div class="container robot-style" id="main-container">
 		<section class="row">
 			<div class="col-sm-6 game-board" id="trail">
+				<!-- new game -->
+				<button onclick="game()"><h3>Press Here to Start A New Game </h3></button>
+				<br>
 				<h3>Life on the Trial</h3>
 				<br>
 				<!-- hangman progress image -->
 				<img src="assets/images/wagon-320.png" atl="wagon" class="center-block" id="img-wagon">
+				<!-- Trail update -->
+				<p id="trail-log"></p>
 			</div>
 			<div class="col-sm-6 game-board">
-				<!-- new game -->
-				<button onclick="game()"><h3>Press Here to Start A New Game </h3></button>
-				
 				<!-- score -->
 				<h3>WINS <span id="displayWins">0</span></h3>
 
 				<h3>Current Word</h3>
 				<br>
-				<!-- Display -->
+				<!-- Display puzzle -->
 				<p id="puzzle"></p>
 				<br>
 
-				<h3>Number of Guesses Remaining</h3>
 				<!-- guessCounter -->
-				
+				<h3>Guesses Remaining</h3>
+				<h3><span id="display-counter">6</span></h3>
 				<!-- Display letters that have alreayd been guessed -->
 				<h3>Letters Guessed</h3>
 				<p id="display-guess"></p>

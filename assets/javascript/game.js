@@ -28,9 +28,9 @@ var dictionary = [
 	"pioneer"];
 
 // 	Wrong Guess
-// 	Display Error Message?
 //	Lower guess counter
 //	Update Trail image
+//	Update Trail log
 
 // 	Correct Guess
 // 	Update word with guessed letter
