@@ -14,8 +14,10 @@ function game() {
     displayCounter.innerHTML = guessCounter;
     displayMessage.innerText = "The Journey Begins!";
   	
-	
-	// Dictionary array of puzzle words.
+	// Message arrays
+
+
+	// Dictionary array for puzzle words.
 	var dictionary = [
 		"rattlesnake", 
 		"cowboy", 
@@ -27,8 +29,18 @@ function game() {
 
 	//	Choose a word
 	var currentWord = dictionary[Math.floor(Math.random() * dictionary.length)];
+
 // Basic Play
 // EventListen for keystroke?
+	// indexOf() returns the position of the first occurance of a specified value in a string
+	// currentWord.indexOf(userGuess)
+	//userGuess = event.key.toUpperCase(); ~~retrives the value of the key pressed (K, 1, return, etc..) and sets it to var userGuess
+
+      // if (options.indexOf(userGuess) < 0) {
+      //   return;
+      // }  ~~~ Checks to see if userGuess is inluded in available options (sanity check for letter of alphabet
+      // ~~~~~~ and can be used to check of userGuess is in the currentWord)
+
 
 
 // 	Wrong Guess
