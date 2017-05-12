@@ -32,21 +32,24 @@
 				<img src="assets/images/wagon-320.png" atl="wagon" class="center-block" id="img-wagon">
 			</div>
 			<div class="col-sm-6 game-board">
-				<h3>Press any key to get started!</h3>
+				<!-- new game -->
+				<button onclick="game()"><h3>Press Here to Start A New Game </h3></button>
 				
-				<h3>WINS</h3>
 				<!-- score -->
+				<h3>WINS <span id="displayWins">0</span></h3>
 
 				<h3>Current Word</h3>
 				<br>
-				<!-- Guessing Area -->
+				<!-- Display -->
+				<p id="puzzle"></p>
 				<br>
 
 				<h3>Number of Guesses Remaining</h3>
 				<!-- guessCounter -->
-
+				
+				<!-- Display letters that have alreayd been guessed -->
 				<h3>Letters Guessed</h3>
-				<!-- alphaTracker -->
+				<p id="display-guess"></p>
 				
 			</div>
 		</section>

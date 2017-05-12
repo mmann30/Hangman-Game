@@ -1,10 +1,14 @@
 // Hangman Game JS
 
-var score, guessCounter, alphaTracker
 
 function game() {
 	
 	alert("this is a test");
+	var score = 0;
+	var guessCounter = 6; 
+
+	var displayGuess = " ";
+
 
 }
 
@@ -13,10 +17,15 @@ alert("Outside function test");
 // EventListen for keystroke?
 
 
-// var dicitionary[]; score; guessCounter; alphaTracker;
-
-//	Dictionary...Array?
-
+// Dictionary array of guess words.
+var dictionary = [
+	"rattlesnake", 
+	"cowboy", 
+	"spur", 
+	"chuckwagon", 
+	"shootout",
+	"buffalo",
+	"pioneer"];
 
 // 	Wrong Guess
 // 	Display Error Message?
