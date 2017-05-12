@@ -37,22 +37,29 @@
 				<p id="trail-log"></p>
 			</div>
 			<div class="col-sm-6 game-board">
-				<!-- score -->
-				<h3>WINS <span id="displayWins">0</span></h3>
+				<!-- displays the score-->
+				<div class="row" id="score-board">
+					<div class="col-sm-6">
+						<h3>WINS</h3>
+						<h4><span id="displayWins">0</span></h4>
+					</div>
+					<div class="col-sm-6">
+						<h3>Guesses Remaining</h3>
+						<h4><span id="display-counter">6</span></h4>
+					</div>
+				</div>
 
-				<h3>Current Word</h3>
-				<br>
-				<!-- Display puzzle -->
-				<p id="puzzle"></p>
-				<br>
+				<div class="row" id="player-interface">
+					<!-- displays the puzzle-->
+					<h4>Current Word</h4>
+					<h3 id="puzzle"> 0 0 0 0 0</h3>
 
-				<!-- guessCounter -->
-				<h3>Guesses Remaining</h3>
-				<h3><span id="display-counter">6</span></h3>
-				<!-- Display letters that have alreayd been guessed -->
-				<h3>Letters Guessed</h3>
-				<p id="display-guess"></p>
-				
+					<br><br>
+
+					<!-- Display letters that have alreayd been guessed -->
+					<h4>Letters Guessed</h4>
+					<h3 id="display-guess">0 0 0 0 0 0</h3>
+				</div>
 			</div>
 		</section>
 	</div>
