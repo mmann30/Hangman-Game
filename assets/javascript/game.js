@@ -1,7 +1,6 @@
 // Hangman Game JS
 function game() {
 	
-	alert("this is a test");
 	var score = 0;
 	var guessCounter = 5; 
 
@@ -12,9 +11,17 @@ function game() {
 	// Gameboard reset
     displayScore.innerHTML = score;
     displayCounter.innerHTML = guessCounter;
-    displayMessage.innerText = "The Journey Begins!";
+    displayMessage.innerText = "Let the Journey Begin!";
   	
-	// Message arrays
+	// Message object/hashtable
+	var message = {
+		win: "Success! Welcome to Tucson...Tucson?? Damnit!",
+		lose: "You have died of dysentery",
+		badGuessOne: "Andy broke his arm trying to get the microphone to work",
+		badGuessTwo: "The axel broke while Shane was using the wagon as a rock stage",
+		badGuessThree: "Lost your oxen while on break, looks like you're on foot",
+		badGuessFour: "Only one more incorrect guess, oh and Andy broke his other arm",
+	};
 
 
 	// Dictionary array for puzzle words.
@@ -51,15 +58,11 @@ function game() {
 // 	Correct Guess
 // 	Update word with guessed letter
 //	Remove letter from guessing pool
-}
-
-alert("Outside function test");
-
-
-
 
 // 	Game Over
 //	Win= score++
 //	Lose= display Game Over
 // 	New Game; User choice or autoplay?
+}
+
 
