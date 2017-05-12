@@ -31,6 +31,7 @@ button {
 
 .game-board {
 	border: dotted 5px;
+	text-align: center;
 }
 
 #trail {
