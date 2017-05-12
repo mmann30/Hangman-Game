@@ -6,6 +6,12 @@ body {
 	font-family: robot;
 	src: url(digital_tech.otf);
 }
+
+button {
+	background-color: #000;
+	border: dotted 1px #66fa2d;
+}
+
 #head-container {
 	max-width: 960px;
 	margin: 0 auto;
