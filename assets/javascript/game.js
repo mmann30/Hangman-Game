@@ -22,11 +22,11 @@ function game() {
 	// Status message displayed in #trail
 	var message = {
 		win: "Success! Welcome to Tucson...Tucson?? Damnit!",
-		lose: "You have died of dysentery",
+		lose: "You have died of dysentery <br> Dont worry you can play again",
 		badGuessOne: "Andy broke his arm trying to get the microphone to work",
 		badGuessTwo: "The axel broke while Shane was using the wagon as a rock stage",
-		badGuessThree: "Lost your oxen while on break, looks like you're on foot",
-		badGuessFour: "Only one more incorrect guess, oh and Andy broke his other arm",
+		badGuessThree: "Lost your oxen while on break",
+		badGuessFour: "Only one more incorrect guess <br> and Joan took an Array to the shoulder",
 	};
 
 	// Dictionary array for puzzle words.
@@ -65,7 +65,8 @@ function game() {
 					//  check gameOver Loss
 					if (guessCounter === 0){
 						// display Game Over
-						alert("Game Over");
+						displayMessage.innerHTML = message.lose;
+						displayCounter.innerHTML = guessCounter;
 						return;
 					}
 				} 
