@@ -19,7 +19,7 @@ function game() {
   	displayCurrentWord.innerText = "0 0 0 0 0";
   	displayGuess.innerText = "0 0 0 0 0 0";
 
-	// Message object
+	// Status message displayed in #trail
 	var message = {
 		win: "Success! Welcome to Tucson...Tucson?? Damnit!",
 		lose: "You have died of dysentery",
@@ -45,6 +45,21 @@ function game() {
 	// Basic Play function?
 	// Begin play when user picks a letter 
 // EventListen for keystroke?
+
+// // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
+//     	document.onkeyup = function(event) {
+
+// //         // Captures the key press, converts it to lowercase, and saves it to a variable.
+// 	        var letter = String.fromCharCode(event.keyCode).toLowerCase();
+
+// 	//         // If the letter is h, run the following functions/methods.
+// 	        function honk(){
+// 	        	if (letter === "h") {
+// 	          	alert("honk");
+// 	        	}
+// 	    	}
+// 		};
+
 	// indexOf() returns the position of the first occurance of a specified value in a string
 	// currentWord.indexOf(userGuess)
 	//userGuess = event.key.toUpperCase(); ~~retrives the value of the key pressed (K, 1, return, etc..) and sets it to var userGuess
