@@ -2,7 +2,8 @@
 function game() {
 	
 	var score = 0;
-	var guessCounter = 5; 
+	var guessCounter = 5;
+	var alphabet = "abcdefghijklmnopqrstuvwxyz"; 
 
 	var	displayScore = document.getElementById("display-score");
 	var displayCounter = document.getElementById("display-counter");
@@ -18,7 +19,7 @@ function game() {
   	displayCurrentWord.innerText = "0 0 0 0 0";
   	displayGuess.innerText = "0 0 0 0 0 0";
 
-	// Message object/hashtable
+	// Message object
 	var message = {
 		win: "Success! Welcome to Tucson...Tucson?? Damnit!",
 		lose: "You have died of dysentery",
@@ -27,7 +28,6 @@ function game() {
 		badGuessThree: "Lost your oxen while on break, looks like you're on foot",
 		badGuessFour: "Only one more incorrect guess, oh and Andy broke his other arm",
 	};
-
 
 	// Dictionary array for puzzle words.
 	var dictionary = [
@@ -41,10 +41,9 @@ function game() {
 
 	//	Choose a word
 	var currentWord = dictionary[Math.floor(Math.random() * dictionary.length)];
-
-	// set 
-
-// Basic Play
+	displayCurrentWord.innerText = currentWord;
+	// Basic Play function?
+	// Begin play when user picks a letter 
 // EventListen for keystroke?
 	// indexOf() returns the position of the first occurance of a specified value in a string
 	// currentWord.indexOf(userGuess)
