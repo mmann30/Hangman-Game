@@ -15,7 +15,7 @@ function game() {
 	// Gameboard reset
     displayScore.innerHTML = score;
     displayCounter.innerHTML = guessCounter;
-    displayMessage.innerHTML = "Let the Journey Begin"+"<br>"+"Press a letter";
+    displayMessage.innerHTML = "CATCH ME IN OREGON...HOW BOUT THAT"+"<br>"+"Press a letter";
   	displayCurrentWord.innerText = "0 0 0 0 0";
   	displayGuess.innerText = "0 0 0 0 0";
 
@@ -72,14 +72,14 @@ function game() {
 				} 
 				// correct guess but already guessed
 				// else if (){
+
+				// // correct guess, not already guessed
+				// } else{
 				// // 	Increase score++
 				// // 	Update word with guessed letter
 				// //	Remove letter from guessing pool??
 				// //  check for gameOver Win 
 				// //		if letters guessed = current word
-
-				// // correct guess, not already guessed
-				// } else{
 
 				// }
         	}
