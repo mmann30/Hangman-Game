@@ -17,7 +17,7 @@ function game() {
     displayCounter.innerHTML = guessCounter;
     displayMessage.innerHTML = "Let the Journey Begin"+"<br>"+"Press a letter";
   	displayCurrentWord.innerText = "0 0 0 0 0";
-  	displayGuess.innerText = "0 0 0 0 0 0";
+  	displayGuess.innerText = "0 0 0 0 0";
 
 	// Status message displayed in #trail
 	var message = {
@@ -44,46 +44,75 @@ function game() {
 	displayCurrentWord.innerText = currentWord;
 	// Basic Play function?
 	// Begin play when user picks a letter 
-// EventListen for keystroke?
 
-// // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
-//     	document.onkeyup = function(event) {
+	// Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
+    document.onkeyup = function(event) {
 
-// //         // Captures the key press, converts it to lowercase, and saves it to a variable.
-// 	        var letter = String.fromCharCode(event.keyCode).toLowerCase();
+		// Captures the key press, converts it to lowercase, and saves it to a variable.
+		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-// 	//         // If the letter is h, run the following functions/methods.
-// 	        function honk(){
-// 	        	if (letter === "h") {
-// 	          	alert("honk");
-// 	        	}
-// 	    	}
-// 		};
+			// userGuess validation to check if it is a letter.
+        	if (alphabet.indexOf(userGuess) < 0) {
+          		
+          		alert("Please pick a letter");
 
-	// indexOf() returns the position of the first occurance of a specified value in a string
-	// currentWord.indexOf(userGuess)
-	//userGuess = event.key.toUpperCase(); ~~retrives the value of the key pressed (K, 1, return, etc..) and sets it to var userGuess
+        	} else {
+	        	// userGuess is not included in the current word
+	        	if (currentWord.indexOf(userGuess) < 0) {
+	        		
+	        		displayGuess.innerText = userGuess;
+					guessCounter--;
+					//  check gameOver Loss
+					if (guessCounter === 0){
+						// display Game Over
+						alert("Game Over");
+						return;
+					}
+				} 
+				// correct guess but already guessed
+				// else if (){
+				// // 	Increase score++
+				// // 	Update word with guessed letter
+				// //	Remove letter from guessing pool??
+				// //  check for gameOver Win 
+				// //		if letters guessed = current word
 
-      // if (options.indexOf(userGuess) < 0) {
-      //   return;
-      // }  ~~~ Checks to see if userGuess is inluded in available options (sanity check for letter of alphabet
-      // ~~~~~~ and can be used to check of userGuess is in the currentWord)
+				// // correct guess, not already guessed
+				// } else{
 
+				// }
+        	}
 
+        	// Update displays
+        	displayScore.innerHTML = score;
+        	displayCounter.innerHTML = guessCounter;
+			
+			//	Update trial image and message display
+			switch (guessCounter){
+				case 4:
+					displayMessage.innerHTML = message.badGuessOne;
+					//change to image 2
+					break;
+				case 3:
+					displayMessage.innerHTML = message.badGuessTwo;
+					//change to image 3
+					break;
+				case 2:
+					displayMessage.innerHTML = message.badGuessThree;
+					//change to image 4
+					break;
+				case 1:
+					displayMessage.innerHTML = message.badGuessFour;
+					//change to image 5
+			}
+			
 
-// 	Wrong Guess
-//	Lower guess counter
-//	Update Trail image
-//	Update Trail log
-
-// 	Correct Guess
-// 	Update word with guessed letter
-//	Remove letter from guessing pool
-
-// 	Game Over
-//	Win= score++
-//	Lose= display Game Over
-// 	New Game; User choice or autoplay?
+				// 	Game Over  function/method?
+				//	Win= score++
+				//	Lose= display Game Over
+				// 	New Game; User choice or autoplay?
+    // End onkeyup()
+	};
+// End game()
 }
-
 
