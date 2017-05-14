@@ -19,6 +19,7 @@ function game() {
     displayMessage.innerHTML = "CATCH ME IN OREGON...HOW BOUT THAT"+"<br>"+"Press a letter";
   	displayCurrentWord.innerText = "0 0 0 0 0";
   	displayGuess.innerText = "0 0 0 0 0";
+  	document.getElementById("img-wagon").src = "assets/images/wagon-320.png";
 
 	// Status message displayed in #trail
 	var message = {
@@ -77,6 +78,7 @@ function game() {
 						// display Game Over
 						displayMessage.innerHTML = message.lose;
 						displayCounter.innerHTML = guessCounter;
+						document.getElementById("img-wagon").src = "assets/images/wagon-320-5.png";
 						return;
 					}
 				} else {
@@ -84,10 +86,8 @@ function game() {
 
 				}
 				// correct guess but already guessed
-				// else if (){
 
 				// // correct guess, not already guessed
-				// } else{
 				// // 	Increase score++
 				// // 	Update word with guessed letter
 				// //	Remove letter from guessing pool??
@@ -105,19 +105,19 @@ function game() {
 			switch (guessCounter){
 				case 4:
 					displayMessage.innerHTML = message.badGuessOne;
-					//change to image 2
+					document.getElementById("img-wagon").src = "assets/images/wagon-320-1.png";
 					break;
 				case 3:
 					displayMessage.innerHTML = message.badGuessTwo;
-					//change to image 3
+					document.getElementById("img-wagon").src = "assets/images/wagon-320-2.png";
 					break;
 				case 2:
 					displayMessage.innerHTML = message.badGuessThree;
-					//change to image 4
+					document.getElementById("img-wagon").src = "assets/images/wagon-320-3.png";
 					break;
 				case 1:
 					displayMessage.innerHTML = message.badGuessFour;
-					//change to image 5
+					document.getElementById("img-wagon").src = "assets/images/wagon-320-4.png";
 			}
 			
 
