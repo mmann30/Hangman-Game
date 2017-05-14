@@ -9,6 +9,7 @@ function game() {
 	var displayCounter = document.getElementById("display-counter");
 	var displayMessage = document.getElementById("message");
 	var displayCurrentWord = document.getElementById("current-word");
+	var displayWordHolder = document.getElementById("current-word");
 	var displayGuess = document.getElementById("display-guess");
 
 
@@ -41,7 +42,16 @@ function game() {
 
 	//	Choose a word
 	var currentWord = dictionary[Math.floor(Math.random() * dictionary.length)];
-	displayCurrentWord.innerText = currentWord;
+	//	Set display to blank word spaces
+	function wordHolder(currentWord) {
+		// Reset current word display to empty space
+		displayCurrentWord.innerHTML = ("");
+		for (var i = 0; i < currentWord.length; i++){
+			displayCurrentWord.innerHTML = document.createElement("li");
+		}
+	}	
+
+	wordHolder(currentWord);
 	// Basic Play function?
 	// Begin play when user picks a letter 
 
@@ -62,14 +72,17 @@ function game() {
 	        		
 	        		displayGuess.innerText = userGuess;
 					guessCounter--;
-					//  check gameOver Loss
+					//  check for Game Over
 					if (guessCounter === 0){
 						// display Game Over
 						displayMessage.innerHTML = message.lose;
 						displayCounter.innerHTML = guessCounter;
 						return;
 					}
-				} 
+				} else {
+
+
+				}
 				// correct guess but already guessed
 				// else if (){
 
@@ -114,6 +127,9 @@ function game() {
 				// 	New Game; User choice or autoplay?
     // End onkeyup()
 	};
+
+	// gameOver function???
+
 // End game()
 }
 
