@@ -16,7 +16,7 @@ function game() {
 	// Gameboard reset
     displayScore.innerHTML = score;
     displayCounter.innerHTML = guessCounter;
-    displayMessage.innerHTML = "CATCH ME IN OREGON...HOW BOUT THAT"+"<br>"+"Press a letter";
+    displayMessage.innerHTML = "CASH ME IN OREGON...HOW BOUT THAT"+"<br>"+"Press a letter";
   	displayCurrentWord.innerText = "0 0 0 0 0";
   	displayGuess.innerText = "0 0 0 0 0";
   	document.getElementById("img-wagon").src = "assets/images/wagon-320.png";
