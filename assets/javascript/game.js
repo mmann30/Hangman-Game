@@ -3,7 +3,8 @@ function game() {
 	
 	var score = 0;
 	var guessCounter = 5;
-	var alphabet = "abcdefghijklmnopqrstuvwxyz"; 
+	var alphabet = "abcdefghijklmnopqrstuvwxyz";
+	var guesses = " "; 
 
 	var	displayScore = document.getElementById("display-score");
 	var displayCounter = document.getElementById("display-counter");
@@ -18,7 +19,7 @@ function game() {
     displayCounter.innerHTML = guessCounter;
     displayMessage.innerHTML = "CASH ME IN OREGON...HOW BOUT THAT"+"<br>"+"Press a letter";
   	displayCurrentWord.innerText = "0 0 0 0 0";
-  	displayGuess.innerText = "0 0 0 0 0";
+  	displayGuess.innerHTML = guesses;
   	document.getElementById("img-wagon").src = "assets/images/wagon-320.png";
 
 	// Status message displayed in #trail
@@ -71,7 +72,7 @@ function game() {
 	        	// userGuess is not included in the current word
 	        	if (currentWord.indexOf(userGuess) < 0) {
 	        		
-	        		displayGuess.innerText = userGuess;
+	        		guesses = guesses + " " + userGuess;
 					guessCounter--;
 					//  check for Game Over
 					if (guessCounter === 0){
@@ -100,6 +101,7 @@ function game() {
         	// Update displays
         	displayScore.innerHTML = score;
         	displayCounter.innerHTML = guessCounter;
+        	displayGuess.innerHTML = guesses;
 			
 			//	Update trial image and message display
 			switch (guessCounter){
