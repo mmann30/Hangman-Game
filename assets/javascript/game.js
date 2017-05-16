@@ -42,14 +42,19 @@ function game() {
 		"buffalo",
 		"pioneer"];
 
-	//	Choose a word
-	var currentWord = dictionary[Math.floor(Math.random() * dictionary.length)];
 	//	Set display to blank word spaces
+	displayCurrentWord.innerHTML = "";
+	
+	//	Computer chooses a word
+	var currentWord = dictionary[Math.floor(Math.random() * dictionary.length)];
+	
+	//  Creates  list items for each letter of the word picked by the computer
 	function wordHolder(currentWord) {
-		// Reset current word display to empty space
-		displayCurrentWord.innerHTML = ("");
 		for (var i = 0; i < currentWord.length; i++){
-			displayCurrentWord.innerHTML = document.createElement("li");
+			var placeHolder = document.createElement("LI");
+			placeHolder.appendChild(document.createTextNode(currentWord[i]));
+			displayCurrentWord.appendChild(placeHolder);
+
 		}
 	}	
 
@@ -62,30 +67,30 @@ function game() {
 
 		// Captures the key press, converts it to lowercase, and saves it to a variable.
 		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
 			// userGuess validation to check if it is a letter.
         	if (alphabet.indexOf(userGuess) < 0) {
           		
           		alert("Please pick a letter");
 
         	} else {
+				var guessIndex = currentWord.indexOf(userGuess)
 	        	// userGuess is not included in the current word
-	        	if (currentWord.indexOf(userGuess) < 0) {
+	        	if (guessIndex < 0) {
 	        		
 	        		guesses = guesses + " " + userGuess;
 					guessCounter--;
+        			displayCounter.innerHTML = guessCounter;
 					//  check for Game Over
 					if (guessCounter === 0){
 						// display Game Over
 						displayMessage.innerHTML = message.lose;
-						displayCounter.innerHTML = guessCounter;
 						document.getElementById("img-wagon").src = "assets/images/wagon-320-5.png";
 						return;
 					}
-				} else {
+				} 
+				// else if {
 
-
-				}
+				// }
 				// correct guess but already guessed
 
 				// // correct guess, not already guessed
@@ -100,7 +105,6 @@ function game() {
 
         	// Update displays
         	displayScore.innerHTML = score;
-        	displayCounter.innerHTML = guessCounter;
         	displayGuess.innerHTML = guesses;
 			
 			//	Update trial image and message display
