@@ -52,15 +52,13 @@ function game() {
 	function wordHolder(currentWord) {
 		for (var i = 0; i < currentWord.length; i++){
 			var placeHolder = document.createElement("LI");
-			placeHolder.appendChild(document.createTextNode(currentWord[i]));
+			placeHolder.setAttribute("id", currentWord[i]);
+			placeHolder.appendChild(document.createTextNode(0));
 			displayCurrentWord.appendChild(placeHolder);
-
 		}
 	}	
 
 	wordHolder(currentWord);
-	// Basic Play function?
-	// Begin play when user picks a letter 
 
 	// Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
     document.onkeyup = function(event) {
@@ -87,20 +85,21 @@ function game() {
 						document.getElementById("img-wagon").src = "assets/images/wagon-320-5.png";
 						return;
 					}
-				} 
-				// else if {
-
-				// }
-				// correct guess but already guessed
-
-				// // correct guess, not already guessed
-				// // 	Increase score++
-				// // 	Update word with guessed letter
-				// //	Remove letter from guessing pool??
-				// //  check for gameOver Win 
-				// //		if letters guessed = current word
-
-				// }
+				// userGuess is included in the current word
+				} else {
+					//  Established which letter of the current word was guessed by the user
+					var letter = currentWord.indexOf(userGuess);
+					var pickedLetter = currentWord[letter];
+					//	Displays correctly picked letter
+					document.getElementById(pickedLetter).innerHTML = pickedLetter;
+					
+					//	How to display second letter of same type?
+				 	// 	Increase score++
+				 	//	Remove letter from guessing pool??
+				 	//  Check for gameOver Win 
+					//		if letters guessed = current word		
+				}
+				// correct guess but already guessed...will have to create else if above
         	}
 
         	// Update displays
@@ -125,16 +124,13 @@ function game() {
 					displayMessage.innerHTML = message.badGuessFour;
 					document.getElementById("img-wagon").src = "assets/images/wagon-320-4.png";
 			}
-			
-
-				// 	Game Over  function/method?
-				//	Win= score++
-				//	Lose= display Game Over
-				// 	New Game; User choice or autoplay?
     // End onkeyup()
 	};
 
-	// gameOver function???
+	// gameOver function???	
+	//	Win= score++
+	//	Lose= display Game Over
+	// 	New Game; User choice or autoplay?
 
 // End game()
 }
